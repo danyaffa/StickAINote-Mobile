@@ -1,27 +1,21 @@
+cd ~/StickAINote-Mobile
+
 cat > package.json << 'EOF'
 {
   "name": "stickainote-mobile",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && npx cap sync",
-    "android": "npx cap sync android && npx cap open android",
-    "ios": "npx cap sync ios && npx cap open ios"
+    "sync": "npx cap sync",
+    "android": "npx cap add android && npx cap open android",
+    "ios": "npx cap add ios && npx cap open ios"
   },
   "dependencies": {
     "@capacitor/android": "^6.0.0",
     "@capacitor/app": "^6.0.0",
     "@capacitor/browser": "^6.0.0",
     "@capacitor/core": "^6.0.0",
-    "@capacitor/ios": "^6.0.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.1.0",
-    "typescript": "^5.5.0",
-    "vite": "^5.0.0"
+    "@capacitor/ios": "^6.0.0"
   }
 }
 EOF
